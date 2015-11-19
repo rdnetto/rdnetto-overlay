@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repositories encoding="UTF-8" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>rdnetto-overlay</name>
+    <description lang="en">Reuben D'Netto's personal overlay</description>
+    <homepage>https://github.com/rdnetto/rdnetto-overlay</homepage>
+    <owner type="person">
+      <email>rdnetto@gmail.com</email>
+      <name>Reuben D'Netto</name>
+    </owner>
+    <source type="git">https://github.com/rdnetto/rdnetto-overlay.git</source>
+  </repo>
+</repositories>
