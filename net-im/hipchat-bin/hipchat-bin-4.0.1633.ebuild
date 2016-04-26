@@ -8,7 +8,7 @@ DESCRIPTION="A Hipchat client"
 HOMEPAGE="http://www.hipchat.com/"
 
 # curl https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/dists/xenial/main/binary-amd64/Packages to see the current versions
-SRC_URI="http://downloads.hipchat.com/linux/hipchat4/debian/pool/main/h/hipchat4/hipchat4_${PV}_amd64.deb"
+SRC_URI="https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-${PV}-Linux.deb"
 
 LICENSE="Proprietary"
 SLOT="0"
