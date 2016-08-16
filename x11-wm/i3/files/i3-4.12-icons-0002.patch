@@ -1,0 +1,85 @@
+From 6dfc6539d6d4cae8fe4ed3ee7726f1222db6dd0c Mon Sep 17 00:00:00 2001
+From: Reuben D'Netto <rdnetto@gmail.com>
+Date: Fri, 12 Aug 2016 20:21:47 +1000
+Subject: [PATCH 2/2] Replaced XCB icon rendering with Cairo
+
+---
+ src/x.c | 53 ++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 34 insertions(+), 19 deletions(-)
+
+diff --git a/src/x.c b/src/x.c
+index 906142a..c467131 100644
+--- a/src/x.c
++++ b/src/x.c
+@@ -658,34 +658,49 @@ void x_draw_decoration(Con *con) {
+ #ifdef USE_ICONS
+     /* Draw the icon */
+     if (win->icon) {
+-        xcb_image_t* icon;
+-
+         uint16_t width = 16;
+         uint16_t height = 16;
+-        uint32_t icon_pixels[width*height];
+-
+-        copy_with_pixel_blend(icon_pixels, win->icon, p->color->background);
+-
+-        icon = xcb_image_create_native( conn,
+-                width, height,
+-                XCB_IMAGE_FORMAT_Z_PIXMAP,
+-                root_depth,
+-                NULL,
+-                width*height*4,
+-                (uint8_t*)icon_pixels
++        uint32_t stride = 4*width;
++
++        fprintf(stderr, "Creating icon\n");
++        surface_t *surface = &(parent->frame_buffer);
++
++        int icon_offset_x = indent_px - 16;
++        int icon_offset_y = (con->deco_rect.height - 16) / 2;
++        cairo_surface_t *dst = cairo_xcb_surface_create(conn, surface->id,
++                                                            surface->visual_type,
++                                                            con->deco_rect.x + con->deco_rect.width,
++                                                            con->deco_rect.y + con->deco_rect.height
++                                                            );
++        cairo_t *dst_cr = cairo_create(dst);
++
++        cairo_surface_t *icon = cairo_image_surface_create_for_data(
++                (uint8_t*) win->icon,
++                CAIRO_FORMAT_ARGB32,
++                width,
++                height,
++                stride
+                 );
+ 
+         if (icon) {
+-            int icon_offset_y = (con->deco_rect.height - 16) / 2;
++            cairo_set_source_surface(
++                    dst_cr,
++                    icon,
++                    con->deco_rect.x + icon_offset_x,
++                    con->deco_rect.y + icon_offset_y
++                    );
+ 
+-            xcb_image_put(conn, parent->pixmap, parent->pm_gc,
+-                    icon, con->deco_rect.x + indent_px - 16 , con->deco_rect.y + icon_offset_y, 0);
++            cairo_paint(dst_cr);
++            cairo_surface_destroy(icon);
+ 
+-            xcb_image_destroy(icon);
+-        }
+-        else {
++        } else {
+             ELOG("Error creating XCB image\n");
++            fprintf(stderr, "Error creating XCB image\n");
+         }
++
++        cairo_destroy(dst_cr);
++        cairo_surface_destroy(dst);
++
+     }
+ #endif
+ 
+-- 
+2.9.2
+
