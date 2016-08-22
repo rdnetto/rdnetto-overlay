@@ -10,6 +10,7 @@ NEW_EBUILD="hipchat-bin-${LATEST}.ebuild"
 
 if [ ! -f "${NEW_EBUILD}" ]; then
 	echo "Bumping version to ${LATEST}..."
+	git pull
 	cp "$REF_EBUILD" "$NEW_EBUILD"
 	repoman manifest .
 	git add .
