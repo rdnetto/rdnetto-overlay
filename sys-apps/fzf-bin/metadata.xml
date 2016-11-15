@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>rdnetto@gmail.com</email>
+	<description>Primary maintainer</description>
+</maintainer>
+<use>
+	<flag name="bash">Adds completion support for <pkg>app-shells/bash</pkg>.</flag>
+	<flag name="zsh">Adds completion support for <pkg>app-shells/zsh</pkg>.</flag>
+	<flag name="tmux">Adds tmux-session script.</flag>
+</use>
+</pkgmetadata>
