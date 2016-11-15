@@ -11,6 +11,7 @@ SRC_URI="https://syd.rdnetto.net/pub/stack-1.2.0-r1.tar.xz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
+DEPEND="!dev-haskell/stack"
 
 S="${WORKDIR}"
 
