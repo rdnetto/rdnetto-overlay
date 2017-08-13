@@ -8,6 +8,7 @@ inherit git-r3 stack
 DESCRIPTION="CLI tool for resolving merge conflicts, inspired by dispatch-conf."
 HOMEPAGE="https://bitbucket.org/rdnetto/dispatch-merge"
 EGIT_REPO_URI="https://rdnetto@bitbucket.org/rdnetto/dispatch-merge.git"
+SRC_URI="$(stack_ghc_src 7.10.3)"
 
 if [ "${PV#9999}" == "${PV}" ] ; then
 	EGIT_COMMIT="${PV}"
