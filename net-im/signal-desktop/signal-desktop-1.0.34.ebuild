@@ -28,5 +28,6 @@ src_unpack() {
 
 src_install() {
     cp -R "${S}/"* "${D}/" || die "Install failed!"
+	dosym /opt/Signal/signal-desktop /usr/bin/signal-desktop
 }
 
