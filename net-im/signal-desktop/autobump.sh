@@ -1,11 +1,11 @@
 #!/bin/bash
-set -e
-cd $(dirname $0)
+set -eu -o pipefail
+cd "$(dirname "$0")"
 
 APT_REPO="https://updates.signal.org/desktop/apt"
 APT_PKG_NAME="signal-desktop"
 LATEST=$(curl -sS "${APT_REPO}/dists/xenial/main/binary-amd64/Packages" \
-    | grep -A10 "${APT_PKG_NAME}"\
+    | grep -A10 "Package: ${APT_PKG_NAME}$"\
     | awk '/Version/{print $2}'  \
     | sort --version-sort        \
     | tail -n1                   \
