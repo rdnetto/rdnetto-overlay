@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 # Yes, this ebuild requires another version of stack to be installed already. Stack-bin should make it trivial to bootstrap.
