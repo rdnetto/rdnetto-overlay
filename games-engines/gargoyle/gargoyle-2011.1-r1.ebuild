@@ -12,7 +12,8 @@
 EAPI=5
 inherit eutils multiprocessing toolchain-funcs gnome2-utils games
 
-DESCRIPTION="An Interactive Fiction (IF) player supporting all major formats. (Patched to include missing fonts)"
+# This ebuild is patched to include missing fonts
+DESCRIPTION="An Interactive Fiction (IF) player supporting all major formats."
 HOMEPAGE="http://ccxvii.net/gargoyle/"
 SRC_URI="https://garglk.googlecode.com/files/${P}-sources.zip"
 

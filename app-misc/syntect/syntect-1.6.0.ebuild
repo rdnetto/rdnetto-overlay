@@ -62,7 +62,7 @@ yaml-rust-0.3.5
 
 inherit cargo
 
-DESCRIPTION="Library for high quality syntax highlighting and code intelligence using Sublime Text's grammars"
+DESCRIPTION="Library for syntax highlighting using Sublime Text's grammars"
 HOMEPAGE="https://github.com/trishume/syntect"
 SRC_URI="$(cargo_crate_uris ${CRATES})"
 RESTRICT="mirror"

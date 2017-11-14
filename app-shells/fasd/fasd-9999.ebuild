@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit git-2
 
-DESCRIPTION="Offers quick command-line access to files and directories, inspired by autojump, z and v"
+DESCRIPTION="Quick command-line access to files and directories"
 EGIT_REPO_URI="git://github.com/clvv/fasd.git"
 HOMEPAGE="https://github.com/clvv/fasd"
 
