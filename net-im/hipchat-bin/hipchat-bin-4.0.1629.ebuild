@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -53,7 +53,6 @@ src_unpack() {
 }
 
 src_install() {
-    cp -R "${S}/"* "${D}/" || die "Install failed!"
+	cp -R "${S}/"* "${D}/" || die "Install failed!"
 	dosym /opt/HipChat4/bin/HipChat4 /usr/local/bin/HipChat4
 }
-

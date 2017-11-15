@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -23,7 +23,6 @@ RDEPEND="${DEPEND}
 	app-editors/neovim"
 
 if [ "${PV#9999}" == "${PV}" ] ; then
-        EGIT_COMMIT="v${PV}"
-        KEYWORDS="~amd64 ~x86"
+	EGIT_COMMIT="v${PV}"
+	KEYWORDS="~amd64 ~x86"
 fi
-
