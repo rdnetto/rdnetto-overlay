@@ -1,6 +1,8 @@
 # Rdnetto-Overlay
 
-This is an overlay for use with Gentoo and Sabayon Linux. It contains packages intended for my personal use. I make no guarrantees about its stability or safety - use at your own risk.
+[![Repoman](https://travis-ci.org/rdnetto/rdnetto-overlay.svg?branch=master)](https://travis-ci.org/rdnetto/rdnetto-overlay)
+
+This is an overlay for use with Gentoo and Sabayon Linux. It contains packages intended for my personal use. Packages will be maintained on a best-effort basis, though caveat emptor.
 
 ## Installing
 
