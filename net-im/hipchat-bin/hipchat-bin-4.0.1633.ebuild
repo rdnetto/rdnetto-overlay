@@ -53,7 +53,6 @@ src_unpack() {
 }
 
 src_install() {
-    cp -R "${S}/"* "${D}/" || die "Install failed!"
+	cp -R "${S}/"* "${D}/" || die "Install failed!"
 	dosym /opt/HipChat4/bin/HipChat4 /usr/local/bin/HipChat4
 }
-

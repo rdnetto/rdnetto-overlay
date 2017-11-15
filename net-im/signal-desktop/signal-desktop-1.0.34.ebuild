@@ -15,9 +15,9 @@ KEYWORDS="~amd64"
 # Depends: gconf2, gconf-service, libnotify4, libappindicator1, libxtst6, libnss3, libxss1
 RDEPEND="
 	x11-libs/libnotify
-    gnome-base/gconf:2
-    dev-libs/libappindicator
-    x11-libs/libXtst
+	gnome-base/gconf:2
+	dev-libs/libappindicator
+	x11-libs/libXtst
 "
 
 src_unpack() {
@@ -27,7 +27,6 @@ src_unpack() {
 }
 
 src_install() {
-    cp -R "${S}/"* "${D}/" || die "Install failed!"
+	cp -R "${S}/"* "${D}/" || die "Install failed!"
 	dosym /opt/Signal/signal-desktop /usr/bin/signal-desktop
 }
-

@@ -17,4 +17,3 @@ fi
 LICENSE="CC0-1.0"
 SLOT="0/${PV}"
 IUSE=""
-

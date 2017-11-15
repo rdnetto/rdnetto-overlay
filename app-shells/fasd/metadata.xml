@@ -4,8 +4,8 @@
 	<maintainer type="person">
 		<email>rdnetto@gmail.com</email>
 	</maintainer>
-        <upstream>
-                <bugs-to>https://github.com/clvv/fasd/issues</bugs-to>
-                <remote-id type="github">fasd</remote-id>
-        </upstream>
+	<upstream>
+		<bugs-to>https://github.com/clvv/fasd/issues</bugs-to>
+		<remote-id type="github">fasd</remote-id>
+	</upstream>
 </pkgmetadata>
