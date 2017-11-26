@@ -14,7 +14,7 @@ REF_EBUILD="signal-desktop-1.0.34.ebuild"
 NEW_EBUILD="signal-desktop-${LATEST}.ebuild"
 
 if [ ! -f "${NEW_EBUILD}" ]; then
-	echo "Bumping version to ${LATEST}..."
+	echo "net-im/signal-desktop: Bumping version to ${LATEST}..."
 
 	git pull
 	cp -s "$REF_EBUILD" "$NEW_EBUILD"
