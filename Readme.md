@@ -6,7 +6,6 @@ This is an overlay for use with Gentoo and Sabayon Linux. It contains packages i
 
 ## Installing
 
-    $ sudo wget https://raw.githubusercontent.com/rdnetto/rdnetto-overlay/master/repository.xml -O /etc/layman/overlays/rdnetto-overlay.xml
     $ sudo layman -f -a rdnetto-overlay
 
 ## License
