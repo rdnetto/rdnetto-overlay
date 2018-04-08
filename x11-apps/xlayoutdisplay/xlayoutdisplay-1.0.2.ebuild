@@ -23,6 +23,9 @@ DEPEND="x11-libs/libXrandr
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
 
+# Needed for gtest module
+CMAKE_MIN_VERSION="3.10.0"
+
 
 src_install() {
 	exeinto /usr/bin/
