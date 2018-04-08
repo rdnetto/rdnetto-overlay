@@ -19,7 +19,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 DEPEND="x11-libs/libXrandr
-		dev-cpp/gtest
 		dev-libs/boost
 "
 CMAKE_BUILD_TYPE=RelWithDebInfo
