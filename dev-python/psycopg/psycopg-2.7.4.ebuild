@@ -1,1 +1,0 @@
-/usr/portage/dev-python/psycopg/psycopg-2.7.3.ebuild
