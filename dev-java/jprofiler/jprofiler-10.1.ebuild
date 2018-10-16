@@ -11,12 +11,12 @@ RESTRICT="strip"
 
 DESCRIPTION="JProfiler java profiling tool"
 HOMEPAGE="http://www.ej-technologies.com/products/jprofiler/overview.html"
-SRC_URI="http://download-aws.ej-technologies.com/jprofiler/jprofiler_linux_${PV//./_}.tar.gz"
+SRC_URI="https://download-keycdn.ej-technologies.com/jprofiler/jprofiler_linux_${PV//./_}.tar.gz"
 LICENSE="Proprietary"
 IUSE=""
 KEYWORDS="~x86 ~amd64"
 MV="$(get_major_version)"
-S="${WORKDIR}/jprofiler${MV}"
+S="${WORKDIR}/jprofiler${PV}"
 INSTALL_DIR="/opt/${PN}-${PV}"
 
 src_prepare(){
