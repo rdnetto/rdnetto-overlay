@@ -3,7 +3,7 @@ set -e
 cd $(dirname $0)
 
 APT_REPO="https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/dists/xenial/main"
-LATEST=$(curl -sS "${APT_REPO}/binary-amd64/Packages" | grep -A1 hipchat4 | awk '/Version/{print $2}' | sort | tail -n1)
+LATEST=$(curl -sSfL "${APT_REPO}/binary-amd64/Packages" | grep -A1 hipchat4 | awk '/Version/{print $2}' | sort | tail -n1)
 
 REF_EBUILD="hipchat-bin-4.0.1634.ebuild"
 NEW_EBUILD="hipchat-bin-${LATEST}.ebuild"

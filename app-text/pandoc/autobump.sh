@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 CATEGORY="app-text"
 PN="pandoc"
 REF_EBUILD="$PN-2.5.ebuild"
-LATEST="$(curl https://api.github.com/repos/jgm/$PN/releases/latest | jq -r .tag_name | sed s/v//)"
+LATEST="$(curl -sSfL https://api.github.com/repos/jgm/$PN/releases/latest | jq -r .tag_name | sed s/v//)"
 
 
 if [ -e "$PN-$LATEST.ebuild" ]; then

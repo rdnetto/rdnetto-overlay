@@ -3,7 +3,7 @@ set -eu -o pipefail
 cd "$(dirname "$0")"
 
 REF_EBUILD="bat-0.3.0.ebuild"
-LATEST="$(curl https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r .tag_name | sed s/v//)"
+LATEST="$(curl -sSfL https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r .tag_name | sed s/v//)"
 
 if [ -e "bat-$LATEST.ebuild" ]; then
 	exit 0

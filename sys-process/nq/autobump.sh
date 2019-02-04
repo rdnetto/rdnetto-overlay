@@ -7,7 +7,7 @@ PN="nq"
 REF_EBUILD="$PN-0.1.ebuild"
 
 # using tags instead of releases
-LATEST="$(curl https://api.github.com/repos/chneukirchen/nq/tags    \
+LATEST="$(curl -sSfL https://api.github.com/repos/chneukirchen/nq/tags    \
     | jq -r '.[] | .name'                                           \
     | sort -V                                                       \
     | tail -n1                                                      \

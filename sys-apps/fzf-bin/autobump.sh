@@ -7,7 +7,7 @@ PN="fzf-bin"
 REF_EBUILD="$PN-0.15.7.ebuild"
 
 # using tags instead of releases
-LATEST="$(curl https://api.github.com/repos/junegunn/fzf/tags       \
+LATEST="$(curl -sSfL https://api.github.com/repos/junegunn/fzf/tags       \
     | jq -r '.[] | .name'                                           \
     | sort -V                                                       \
     | tail -n1)"

@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 CATEGORY="dev-haskell"
 PN="stack-bin"
 REF_EBUILD="$PN-1.6.1.ebuild"
-LATEST="$(curl https://api.github.com/repos/commercialhaskell/stack/releases/latest | jq -r .tag_name | sed s/v//)"
+LATEST="$(curl -sSfL https://api.github.com/repos/commercialhaskell/stack/releases/latest | jq -r .tag_name | sed s/v//)"
 
 
 if [ -e "$PN-$LATEST.ebuild" ]; then
