@@ -1,1 +1,0 @@
-hipchat-bin-4.0.1634.ebuild
