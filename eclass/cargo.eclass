@@ -20,7 +20,7 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install
 
 IUSE="${IUSE} debug"
 
-[[ ${CATEGORY}/${PN} != dev-util/cargo ]] && DEPEND=">=dev-util/cargo-0.13.0"
+[[ ${CATEGORY}/${PN} != dev-util/cargo ]] && DEPEND=">=virtual/cargo-0.13.0"
 
 ECARGO_HOME="${WORKDIR}/cargo_home"
 ECARGO_VENDOR="${ECARGO_HOME}/gentoo"
@@ -122,7 +122,7 @@ cargo_src_compile() {
 cargo_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	cargo install --root="${D}/usr" $(usex debug --debug "") ${CARGO_FLAGS} \
+	cargo install --root="${D}/usr" --path="." $(usex debug --debug "") ${CARGO_FLAGS} \
 		|| die "cargo install failed"
 	rm -f "${D}/usr/.crates.toml"
 
