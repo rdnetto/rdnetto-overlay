@@ -1,0 +1,13 @@
+[Unit]
+Description=Runs i3lock on suspend
+Before=sleep.target
+
+[Service]
+User=%I
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/home/%I/.config/i3/lock.sh
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target
