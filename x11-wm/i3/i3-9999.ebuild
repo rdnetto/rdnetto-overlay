@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs git-2
 DESCRIPTION="An improved dynamic tiling window manager"
 HOMEPAGE="http://i3wm.org/"
 SRC_URI=""
-EGIT_REPO_URI="/home/reuben/i3"
+EGIT_REPO_URI="/home/renee/i3"
 EGIT_BRANCH="4.12_branch"
 
 LICENSE="BSD"

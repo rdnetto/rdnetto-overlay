@@ -3,8 +3,8 @@
 # $Id$
 
 # @ECLASS: stack.eclass
-# @MAINTAINER: Reuben D'Netto <rdnetto@gmail.com>
-# @AUTHOR: Reuben D'Netto <rdnetto@gmail.com>
+# @MAINTAINER: Renee D'Netto <rdnetto@gmail.com>
+# @AUTHOR: Renee D'Netto <rdnetto@gmail.com>
 # @BLURB: An eclass for programs compiled using Haskell Stack.
 # @DESCRIPTION:
 # This eclass allows Haskell programs to be compiled using Stack,
@@ -38,7 +38,7 @@ stack_src_configure() {
 
 	# Prepopulate stack index
 	einfo "Using cached index"
-	cp -r /home/reuben/.stack/indices ${STACK_ROOT}/
+	cp -r /home/renee/.stack/indices ${STACK_ROOT}/
 
 	# Add pre-downloaded STACK_GHC to Stack path
 	einfo "Configuring GHC"

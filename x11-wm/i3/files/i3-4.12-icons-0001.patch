@@ -1,5 +1,5 @@
 From 39128328a339648ce09764cd4f59fe527448cacf Mon Sep 17 00:00:00 2001
-From: Reuben D'Netto <rdnetto@gmail.com>
+From: Renee D'Netto <rdnetto@gmail.com>
 Date: Fri, 12 Aug 2016 18:31:56 +1000
 Subject: [PATCH 1/2] Added support for window icons (_NET_WM_ICON property)
 
