@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!-- Copied from 0bs1d1an overlay -->
+<pkgmetadata>
+    <maintainer type="person">
+        <email>rdnetto@gmail.com</email>
+        <name>Renee D'Netto</name>
+    </maintainer>
+    <use>
+    </use>
+    <upstream>
+        <remote-id type="gitlab">so-fancy/diff-so-fancy</remote-id>
+    </upstream>
+</pkgmetadata>
