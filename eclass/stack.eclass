@@ -38,7 +38,7 @@ stack_src_configure() {
 	# Add pre-downloaded STACK_GHC to Stack path
 	einfo "Configuring GHC"
 	mkdir -p ${STACK_ROOT}/programs/x86_64-linux/
-	cp -s ${DISTDIR}/ghc-tinfo6-*.tar.xz ${STACK_ROOT}/programs/x86_64-linux/ || die
+	cp -sf ${DISTDIR}/ghc-tinfo6-*.tar.xz ${STACK_ROOT}/programs/x86_64-linux/ || die
 
 	stack ${STACK_ARGS} setup || die
 }

@@ -1,1 +1,1 @@
-powerline-hs-0.1.0.0.ebuild
+powerline-hs-0.1.3.1.ebuild
