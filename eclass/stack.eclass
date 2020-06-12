@@ -16,18 +16,17 @@
 # Inheritors need to specify the version of GHC to use like so:
 # 	SRC_URI="$(stack_ghc_src 8.0.2)"
 
+# Include generated code
+inherit stack_urls
+
 # Either stack package can be used.
 DEPEND="|| ( dev-haskell/stack dev-haskell/stack-bin )"
 
 EXPORT_FUNCTIONS src_configure src_compile src_install
 
-STACK_ROOT="${HOME}/.stack"
+# We want this to be cached across builds, but $HOME is package-specific
+STACK_ROOT="/var/tmp/portage/.stack"
 STACK_ARGS="--stack-root ${STACK_ROOT}"
-
-# Helper function for getting the SRC_URI expresion for a given version of GHC.
-stack_ghc_src() {
-	echo "https://github.com/commercialhaskell/ghc/releases/download/ghc-$1-release/ghc-$1-x86_64-fedora24-linux.tar.xz -> ghc-tinfo6-nopie-$1.tar.xz"
-}
 
 # @FUNCTION: stack_src_configure
 # @DESCRIPTION:
@@ -36,14 +35,10 @@ stack_src_configure() {
 	# Make sure working directory exists
 	mkdir -p ${STACK_ROOT}
 
-	# Prepopulate stack index
-	einfo "Using cached index"
-	cp -r /home/renee/.stack/indices ${STACK_ROOT}/
-
 	# Add pre-downloaded STACK_GHC to Stack path
 	einfo "Configuring GHC"
 	mkdir -p ${STACK_ROOT}/programs/x86_64-linux/
-	cp -s ${DISTDIR}/ghc-tinfo6-nopie-*.tar.xz ${STACK_ROOT}/programs/x86_64-linux/ || die
+	cp -s ${DISTDIR}/ghc-tinfo6-*.tar.xz ${STACK_ROOT}/programs/x86_64-linux/ || die
 
 	stack ${STACK_ARGS} setup || die
 }
