@@ -19,6 +19,7 @@ RDEPEND="
 	gui-apps/wf-recorder
 	gui-apps/wl-clipboard
 	gui-apps/waybar
+	gui-apps/wlogout
 	gui-apps/wofi
 	media-fonts/fontawesome
 	media-video/v4l2loopback
