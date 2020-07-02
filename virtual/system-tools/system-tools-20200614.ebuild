@@ -46,4 +46,5 @@ RDEPEND="
 	sys-fs/xfsprogs
 	sys-kernel/genkernel
 	sys-kernel/gentoo-sources
+	x11-terms/kitty-terminfo
 "
