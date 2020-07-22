@@ -13,7 +13,6 @@ RDEPEND="
 	gui-apps/grim
 	gui-apps/kanshi
 	gui-apps/mako
-	gui-apps/rot8
 	gui-apps/slurp
 	gui-apps/wdisplays
 	gui-apps/wf-recorder
