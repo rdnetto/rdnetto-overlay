@@ -12,6 +12,7 @@ LICENSE="ISC"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
+RESTRICT="network-sandbox"
 
 DEPEND="dev-libs/msgpack
 	dev-qt/qtcore:5
