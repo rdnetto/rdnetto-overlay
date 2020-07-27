@@ -8,7 +8,6 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	app-misc/brotab
 	gui-wm/sway
 	gui-apps/grim
 	gui-apps/kanshi
@@ -23,6 +22,7 @@ RDEPEND="
 	media-fonts/fontawesome
 	media-video/v4l2loopback
 	sys-power/brightnessctl
+	www-plugins/brotab
 	x11-terms/kitty
 	x11-misc/ulauncher
 "
