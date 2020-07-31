@@ -44,7 +44,6 @@ RDEPEND="
 	sys-fs/bcache-tools
 	sys-fs/btrfs-progs
 	sys-fs/xfsprogs
-	sys-kernel/genkernel
-	sys-kernel/gentoo-sources
+	sys-kernel/gentoo-kernel-bin
 	x11-terms/kitty-terminfo
 "
