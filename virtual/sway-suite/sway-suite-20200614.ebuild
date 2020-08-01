@@ -7,6 +7,11 @@ DESCRIPTION="Sway and associated tools"
 SLOT="0"
 KEYWORDS="amd64"
 
+# Need to ensure the kernel is installed before we emerge v4l2loopback
+DEPEND="
+	virtual/system-tools
+"
+
 RDEPEND="
 	gui-wm/sway
 	gui-apps/grim
