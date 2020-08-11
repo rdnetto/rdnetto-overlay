@@ -45,5 +45,6 @@ RDEPEND="
 	sys-fs/btrfs-progs
 	sys-fs/xfsprogs
 	sys-kernel/gentoo-kernel-bin
+	sys-kernel/linux-firmware
 	x11-terms/kitty-terminfo
 "
