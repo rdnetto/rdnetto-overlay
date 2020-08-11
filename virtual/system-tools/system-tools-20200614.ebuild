@@ -32,6 +32,8 @@ RDEPEND="
 	net-misc/mosh
 	net-misc/openssh
 	net-misc/wget
+	net-vpn/wireguard-modules
+	net-vpn/wireguard-tools
 	sys-apps/bar
 	sys-apps/fwupd
 	sys-apps/gptfdisk
