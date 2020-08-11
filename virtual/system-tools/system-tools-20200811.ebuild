@@ -20,6 +20,7 @@ RDEPEND="
 	app-portage/pfl
 	app-portage/portage-utils
 	app-portage/repoman
+	kde-plasma/breeze-plymouth
 	media-sound/alsa-utils
 	net-analyzer/mtr
 	net-analyzer/nethogs
