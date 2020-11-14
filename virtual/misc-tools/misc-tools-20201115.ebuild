@@ -8,11 +8,12 @@ SLOT="0"
 KEYWORDS="amd64"
 
 RDEPEND="
-	kde-misc/kdiff3
 	app-admin/keepassxc
 	app-emulation/docker
+	app-misc/jq
 	app-office/libreoffice-bin
 	dev-python/virtualenv
+	kde-misc/kdiff3
 	mail-client/thunderbird-bin
 	mate-extra/mate-system-monitor
 	media-fonts/corefonts
@@ -28,9 +29,9 @@ RDEPEND="
 	net-misc/youtube-dl
 	net-p2p/deluge
 	net-wireless/wireless-tools
-	www-client/google-chrome
 	www-client/elinks
 	www-client/firefox-bin
+	www-client/google-chrome
 	www-plugins/chrome-binary-plugins
 	x11-apps/mesa-progs
 	x11-apps/xev
