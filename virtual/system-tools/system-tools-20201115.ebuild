@@ -49,7 +49,9 @@ RDEPEND="
 	sys-fs/xfsprogs
 	sys-kernel/gentoo-kernel-bin
 	sys-kernel/linux-firmware
+	sys-process/atop
 	sys-process/htop
 	sys-process/iotop
+	sys-process/lsof
 	x11-terms/kitty-terminfo
 "
