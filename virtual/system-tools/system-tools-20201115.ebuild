@@ -41,6 +41,7 @@ RDEPEND="
 	sys-apps/lshw
 	sys-apps/moreutils
 	sys-apps/pv
+	sys-apps/usbutils
 	sys-block/parted
 	sys-boot/efibootmgr
 	sys-boot/grub:2
